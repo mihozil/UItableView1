@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Banana</string>
+		<key>use</key>
+		<string>Hoa quả miền nhiệt đới</string>
+		<key>photoname</key>
+		<string>Banana.png</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Orange</string>
+		<key>use</key>
+		<string>Nhiều vitamin C</string>
+		<key>photoname</key>
+		<string>Orange.png</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Peach</string>
+		<key>use</key>
+		<string>Ăn rất chua</string>
+		<key>photoname</key>
+		<string>Peach.png</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Strawberry</string>
+		<key>use</key>
+		<string>Ngọt ngào, quyến rũ</string>
+		<key>photoname</key>
+		<string>Strawberry.png</string>
+	</dict>
+</array>
+</plist>

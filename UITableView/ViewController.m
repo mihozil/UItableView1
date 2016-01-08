@@ -7,21 +7,42 @@
 //
 
 #import "ViewController.h"
+#import "modelVC.h"
+#import "dataManager.h"
 
 @interface ViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ViewController{
+    dataManager *datamanager;
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view.
+    datamanager = [dataManager getSingleton];
+    
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
 }
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    // what we have in each cell
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath ];
+    modelVC *item = [modelVC new];
+    item = datamanager.data[indexPath.row];
+    cell.textLabel.text = item.name;
+    cell.detailTextLabel.text = item.use;
+    cell.imageView.image = item.photo;
+    return cell;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return datamanager.data.count;
+}
+
 
 @end
